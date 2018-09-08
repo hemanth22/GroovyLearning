@@ -2,6 +2,14 @@ import groovy.util.GroovyTestCase
 
 class BankAccountTests extends GroovyTestCase {
 
+	def void setUp() {
+	    println 'in setup'
+	}
+	
+	def void tearDown() {
+	    println 'in teardown'
+	}
+
 	def void testCanDepositMoney() {
 	    def account = new BankAccount(10)
 	    account.deposit(5)
