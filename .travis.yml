@@ -2,6 +2,7 @@ language: groovy
 
 script:
   - groovyc BankAccount.groovy
+  - javap BankAccount.class
   - groovy BankAccountTests.groovy
   
 notifications:
