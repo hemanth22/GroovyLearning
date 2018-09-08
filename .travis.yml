@@ -1,0 +1,10 @@
+language: groovy
+
+script:
+  - groovyc BankAccount.groovy
+  - groovy BankAccountTests.groovy
+  
+notifications:
+ slack:
+   rooms:
+     - nothingorganization:GN1JzklSpbMyfZVWcS05U6a0#mygitrepos
