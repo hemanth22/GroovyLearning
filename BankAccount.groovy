@@ -14,6 +14,6 @@ class BankAccount {
 	}
 	
 	def getBalance() {
-		// return balance 
+		return balance 
 	}
 }
