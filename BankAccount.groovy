@@ -12,4 +12,8 @@ class BankAccount {
 	def void withdraw(amount) {
 		balance -= amount
 	}
+	
+	def getBalance() {
+		// return balance 
+	}
 }
