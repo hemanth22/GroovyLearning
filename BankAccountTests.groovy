@@ -34,7 +34,7 @@ class BankAccountTests extends GroovyTestCase {
 	}
 	
 	def void testCanAccrueInterest() {
-            def service = new StubFor(InterestRateService)
+            def service = new MockFor(InterestRateService)
 	    service.demand.getInterestRate{
 		return 0.10
 	    }
