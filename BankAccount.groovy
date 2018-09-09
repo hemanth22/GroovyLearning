@@ -10,10 +10,9 @@ class BankAccount {
 	}
 	
 	def void withdraw(amount) {
+	    if (amount > balance)
+		throw new Exception()
+
 		balance -= amount
-	}
-	
-	def getBalance() {
-		return balance 
-	}
+	}	
 }
