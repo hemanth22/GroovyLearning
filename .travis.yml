@@ -3,9 +3,11 @@ language: groovy
 script:
 
   - groovyc InsufficientFundsException.groovy
+  - groovyc InterestRateService.groovy
   - groovyc BankAccount.groovy
   - javap BankAccount.class
   - javap InsufficientFundsException.class
+  - javap InterestRateService.class
   - groovy BankAccountTests.groovy
   
 notifications:
