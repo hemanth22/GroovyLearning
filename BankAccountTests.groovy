@@ -1,4 +1,5 @@
 import groovy.util.GroovyTestCase
+import groovy.mock.interceptor.*
 
 class BankAccountTests extends GroovyTestCase {
 
@@ -33,12 +34,17 @@ class BankAccountTests extends GroovyTestCase {
 	}
 	
 	def void testCanAccrueInterest() {
-	
+            def service = new StubFor(InterestRateService)
+	    service.demand.getInterestRate{
+		return 0.10
+	    }
+	    service.use {	
 	    account.accrueInterest()
 	    //result = balance + (balance * interestRate)
 	    //    11 = 10      + (10      *         0.10)
 	    //    11 = 10 + 1
             //    11 = 11 
-	    asset 11 == account.balance
+	    asset 11 == account.balance	
+	   }
 	}
 }
