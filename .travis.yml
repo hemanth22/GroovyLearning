@@ -5,9 +5,7 @@ script:
   - groovyc InsufficientFundsException.groovy
   - groovyc InterestRateService.groovy
   - groovyc BankAccount.groovy
-  - javap BankAccount.class
-  - javap InsufficientFundsException.class
-  - javap InterestRateService.class
+  - ls -la *.class
   - groovy BankAccountTests.groovy
   
 notifications:
