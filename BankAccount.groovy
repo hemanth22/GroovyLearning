@@ -18,7 +18,7 @@ class BankAccount {
 	
 	def void accrueInterest() {
 		def service = new InterestRateService()
-                // def rate = service.getInterestRate()
+                def rate = service.getInterestRate()
 	        //	def rate = 0.10
 		// example: 50 = 500 * 0.10
 		def accruedInterest = balance * rate
