@@ -2,7 +2,9 @@ language: groovy
 
 script:
   - groovyc BankAccount.groovy
+  - groovyc InsufficientFundsException.groovy
   - javap BankAccount.class
+  - javap InsufficientFundsException.class
   - groovy BankAccountTests.groovy
   
 notifications:
