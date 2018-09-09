@@ -26,4 +26,9 @@ class BankAccountTests extends GroovyTestCase {
             assert 5 == account.balance
 	}
 
+	def void testCanNotWithdrawMoreMoneyThanBalance(){
+	    shouldFail {
+	         account.withdraw(15)
+	    }
+	}
 }
