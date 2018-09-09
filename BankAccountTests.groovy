@@ -31,4 +31,14 @@ class BankAccountTests extends GroovyTestCase {
 	         account.withdraw(15)
 	    }
 	}
+	
+	def void testCanAccrueInterest() {
+	
+	    account.accrueInterest()
+	    //result = balance + (balance * interestRate)
+	    //    11 = 10      + (10      *         0.10)
+	    //    11 = 10 + 1
+            //    11 = 11 
+	    asset 11 == account.balance
+	}
 }
