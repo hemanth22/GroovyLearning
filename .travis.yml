@@ -1,14 +1,14 @@
 language: groovy
 
 script:
-  - javac Add.java
-  - javap Add.class
- # - groovyc InsufficientFundsException.groovy
- # - groovyc InterestRateService.groovy
- # - groovyc BankAccount.groovy
+ # - javac Add.java
+ # - javap Add.class
+  - groovyc InsufficientFundsException.groovy
+  - groovyc InterestRateService.groovy
+  - groovyc BankAccount.groovy
   - ls -la *.class
-  - groovy AddTests.groovy
- # - groovy BankAccountTests.groovy
+ # - groovy AddTests.groovy
+  - groovy BankAccountTests.groovy
   
 notifications:
  slack:
