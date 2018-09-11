@@ -4,8 +4,7 @@ class AddTests extends GroovyTestCase {
 
 def void testAdditions() {		
 		def account = new Add();
-		
-		assert 30 ==  account.addition(20,10)
+		assert 31 ==  account.addition(20,10)
 	
 	}
 
