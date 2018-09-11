@@ -22,5 +22,5 @@ jobs:
       - run: docker pull java:7
       - run: docker pull groovy
       - run: echo "Docker pull complete."
-      - run: docker run --rm java:7 javac Add.java
-      - run: docker run --rm groovy groovy AddTests.groovy
+      - run: docker run --rm -v"$PWD":/usr/src/myapp -w /usr/src/myapp java:7 javac Add.java
+      - run: docker run --rm -v "$PWD":/home/groovy/scripts -w /home/groovy/scripts groovy groovy AddTests.groovy
