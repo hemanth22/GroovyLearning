@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     working_directory: /app
     docker:
       #- image:18.06.0-ce-git
