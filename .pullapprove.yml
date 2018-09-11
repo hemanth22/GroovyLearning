@@ -7,8 +7,12 @@ notifications:
     so that we can look this over.
 
     We'll let you know if we need anything else from you. Thanks!
+    
+- when: pullapprove.approved
+  comment: "The review is completed. @exampleuser, please merge this is in when ready."
 
 groups:
+  code:
     reviewers:
       users:
       - hemanth22
