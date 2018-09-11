@@ -1,0 +1,14 @@
+version: 3
+
+notifications:
+- when: pull_request.opened
+  comment: >
+    Hi @{{ author }}! PullApprove will request the right reviewers
+    so that we can look this over.
+
+    We'll let you know if we need anything else from you. Thanks!
+
+groups:
+    reviewers:
+      users:
+      - hemanth22
