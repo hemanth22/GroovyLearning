@@ -6,8 +6,12 @@ jobs:
       - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
-      - run: chmod 777 Add.java
-      - run: ls -la
-      - run: javac -d . Add.java
-      - run: sudo apt-get install groovy
-      - run: groovy AddTests.groovy
+      - run:
+          name: Compiling Java Program.
+          command: 'javac -d . Add.java'
+      - run:
+          name: Installing Groovy.
+          command: 'sudo apt-get install groovy'
+      - run:
+          name: Executing Groovy test case.
+          command: 'groovy AddTests.groovy'
