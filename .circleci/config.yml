@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      #- image:18.06.0-ce-git
+      - image: circleci/openjdk:8-jdk-browsers
+    steps:
+      - checkout
+      - run:
+          name: Installing Groovy.
+          command: 'sudo apt-get install groovy'
+      - run:
+          name: Creating InsufficientFundsException.
+          command: 'groovyc InsufficientFundsException.groovy'
+      - run:
+          name: Creating InterestRateService class.
+          command: 'groovyc InterestRateService.groovy'
+      - run:
+          name: Executing Groovy test case.
+          command: 'groovy BankAccountTests.groovy'
