@@ -7,11 +7,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Compiling Java Program.
-          command: 'javac -d . Add.java'
-      - run:
           name: Installing Groovy.
           command: 'sudo apt-get install groovy'
       - run:
+          name: Creating InsufficientFundsException.
+          command: 'groovyc InsufficientFundsException.groovy'
+      - run:
+          name: Creating InterestRateService class.
+          command: 'groovyc InterestRateService.groovy'
+      - run:
           name: Executing Groovy test case.
-          command: 'groovy AddTests.groovy'
+          command: 'groovy BankAccountTests.groovy'
