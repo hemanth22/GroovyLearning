@@ -9,4 +9,5 @@ jobs:
       - run: chmod 777 Add.java
       - run: ls -la
       - run: javac -d . Add.java
+      - run: apt-get install groovy
       - run: groovy AddTests.groovy
