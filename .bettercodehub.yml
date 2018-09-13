@@ -1,0 +1,11 @@
+languages:
+- java
+- groovy
+
+  production:
+    exclude:
+      - *.groovy
+  test:
+    include:
+      - Add.java
+      - AddTests.groovy
