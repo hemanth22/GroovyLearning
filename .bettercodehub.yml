@@ -5,6 +5,8 @@ languages:
   production:
     exclude:
       - *.groovy
+      - .*/*.groovy
+      - *.sh
   test:
     include:
       - Add.java
