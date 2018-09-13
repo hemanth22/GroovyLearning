@@ -9,7 +9,7 @@ script:
   - ls -la *.class
  # - groovy AddTests.groovy
   - groovy BankAccountTests.groovy
-  
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
