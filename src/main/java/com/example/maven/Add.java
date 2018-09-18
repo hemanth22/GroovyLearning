@@ -1,3 +1,4 @@
+package com.examples.maven;
 import java.util.Scanner;
 class Add
 {
