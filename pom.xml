@@ -5,13 +5,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>HelloWorld</artifactId>
+	<artifactId>GroovyLearning</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Cobertura Maven plug-in example for Java project</name>
 	<url>http://cobertura.github.io/cobertura/</url>
-  
+
 	<dependencies>
   	<dependency>
          <groupId>org.codehaus.groovy</groupId>
@@ -20,7 +20,7 @@
          <scope>test</scope>
     </dependency>
   </dependencies>
-  
+
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
@@ -70,5 +70,5 @@
 			</plugin>
 		</plugins>
 	</build>
-  
+
 </project>
