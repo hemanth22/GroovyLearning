@@ -37,9 +37,9 @@
            <configuration>
              <sources>
                <fileset>
-                 <directory>${pom.basedir}/src/test/java</directory>
+                 <directory>${pom.basedir}/src/test/groovy</directory>
                  <includes>
-                   <include>**/*.groovy</include>
+                   <include>**/**/**/*.groovy</include>
                  </includes>
                </fileset>
              </sources>
