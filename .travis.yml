@@ -3,12 +3,15 @@ language: groovy
 script:
  # - javac Add.java
  # - javap Add.class
-  - groovyc InsufficientFundsException.groovy
-  - groovyc InterestRateService.groovy
-  - groovyc BankAccount.groovy
-  - ls -la *.class
+  - maven clean
+  - maven compile
+  - maven test
+  #- groovyc InsufficientFundsException.groovy
+  #- groovyc InterestRateService.groovy
+  #- groovyc BankAccount.groovy
+  #- ls -la *.class
  # - groovy AddTests.groovy
-  - groovy BankAccountTests.groovy
+  #- groovy BankAccountTests.groovy
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
