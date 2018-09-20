@@ -3,7 +3,7 @@ language: groovy
 script:
  # - javac Add.java
  # - javap Add.class
-  - mvn clean 
+  - mvn clean
   - mvn compile -B
   - mvn test -B
   #- groovyc InsufficientFundsException.groovy
@@ -12,6 +12,9 @@ script:
   #- ls -la *.class
  # - groovy AddTests.groovy
   #- groovy BankAccountTests.groovy
+
+after_failure:
+  - ./gitapissue.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
