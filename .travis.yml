@@ -13,8 +13,6 @@ script:
  # - groovy AddTests.groovy
   #- groovy BankAccountTests.groovy
 
-after_failure:
-  - ./gitapissue.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
@@ -23,3 +21,5 @@ notifications:
  slack:
    rooms:
      - nothingorganization:GN1JzklSpbMyfZVWcS05U6a0#mygitrepos
+ script:
+    - ./gitapissue.sh
