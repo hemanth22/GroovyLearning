@@ -16,10 +16,13 @@ script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  
+after_failure:
+    - ./gitapissue.sh
 
 notifications:
  slack:
    rooms:
      - nothingorganization:GN1JzklSpbMyfZVWcS05U6a0#mygitrepos
- script:
-    - ./gitapissue.sh
+
+
