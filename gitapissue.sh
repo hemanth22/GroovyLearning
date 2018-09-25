@@ -1,1 +1,1 @@
-curl -i -H "Authorization: token 2aa5c128fb521c9a339f0e6da5aeae9ab095faec" -d '{"title": "Travis Build no. $TRAVIS_BUILD_ID failure ", "body": "$TRAVIS_TEST_RESULT", "labels": ["critical"]}' https://api.github.com/repos/hemanth22/GroovyLearning/issues
+curl -i -H "Authorization: token key" -d '{"title": "Travis Build no. $TRAVIS_BUILD_ID failure ", "body": "$TRAVIS_TEST_RESULT", "labels": ["critical"]}' https://api.github.com/repos/hemanth22/GroovyLearning/issues
