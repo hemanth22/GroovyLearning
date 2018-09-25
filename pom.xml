@@ -13,40 +13,25 @@
 	<url>http://cobertura.github.io/cobertura/</url>
 
 	<dependencies>
-  	<dependency>
-         <groupId>org.codehaus.groovy</groupId>
-         <artifactId>groovy-all</artifactId>
-         <version>1.6-beta-2</version>
-         <scope>test</scope>
-    </dependency>
-  </dependencies>
+  	   <dependency>
+               <groupId>org.codehaus.groovy</groupId>
+               <artifactId>groovy-all</artifactId>
+               <version>1.6-beta-2</version>
+               <scope>test</scope>
+           </dependency>
+        </dependencies>
 
-	<build>
+    <build>
 		<sourceDirectory>src/main/java</sourceDirectory>
-		<plugins>
-      <plugin>
-        <groupId>org.codehaus.groovy.maven</groupId>
-        <artifactId>gmaven-plugin</artifactId>
-        <version>1.0-rc-3</version>
-        <extensions>true</extensions>
-        <executions>
-         <execution>
-           <goals>
-             <goal>testCompile</goal>
-           </goals>
-           <configuration>
-             <sources>
-               <fileset>
-                 <directory>${pom.basedir}/src/test/groovy</directory>
-                 <includes>
-                   <include>**/*.groovy</include>
-                 </includes>
-               </fileset>
-             </sources>
-           </configuration>
-         </execution>
-        </executions>
-      </plugin>
+                <testSourceDirectory>src/test/groovy</testSourceDirectory>
+
+              <plugins>
+                       <plugin>
+                           <groupId>org.codehaus.groovy.maven</groupId>
+                           <artifactId>gmaven-plugin</artifactId>
+                           <version>1.0-rc-3</version>
+                           <extensions>true</extensions>
+                       </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
