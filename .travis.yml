@@ -4,8 +4,11 @@ script:
  # - javac Add.java
  # - javap Add.class
   - mvn clean
-  - mvn compile -B
-  - mvn test -B
+  - mvn compile
+  - mvn test
+  - mvn clean
+  - mvn install
+  - tree
   #- groovyc InsufficientFundsException.groovy
   #- groovyc InterestRateService.groovy
   #- groovyc BankAccount.groovy
