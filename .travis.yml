@@ -17,7 +17,7 @@ script:
   #- groovy BankAccountTests.groovy
 
 after_failure:
-    - gitapissue.sh
+    - ./gitapissue.sh
 
 notifications:
  slack:
