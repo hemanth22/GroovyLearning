@@ -22,9 +22,6 @@
         </dependencies>
 
     <build>
-		<sourceDirectory>src/main/java</sourceDirectory>
-                <testSourceDirectory>src/test/groovy</testSourceDirectory>
-
               <plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
