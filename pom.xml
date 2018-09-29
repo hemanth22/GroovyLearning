@@ -23,8 +23,8 @@
 
     <build>		
 	    
-	    <sourceDirectory>src/main/java</sourceDirectory>	
-            <testSourceDirectory>src/test/groovy</testSourceDirectory>
+	    <sourceDirectory>../src/main/java</sourceDirectory>	
+            <testSourceDirectory>../src/test/groovy</testSourceDirectory>
             
 	    <plugins>
 			<plugin>
