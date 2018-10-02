@@ -17,6 +17,7 @@ script:
   #- groovy BankAccountTests.groovy
 
 after_failure:
+    - set -x
     - ./gitapissue.sh
 
 notifications:
