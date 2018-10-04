@@ -1,5 +1,5 @@
 #!/bin/bash
-body="{ \"title\": \"Travis Build no. $TRAVIS_BUILD_ID failure \", \"body\": \"$TRAVIS_TEST_RESULT\", \"labels\": [\"critical\"]}"
+body="{ \"title\": \"Travis Build no. $TRAVIS_JOB_NUMBER failure \", \"body\": \"$TRAVIS_TEST_RESULT \n\n JOB URL : $TRAVIS_JOB_WEB_URL\", \"labels\": [\"critical\"]}"
 
 curl -i \
      -H "Travis-API-Version: 3" \
