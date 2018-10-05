@@ -8,7 +8,11 @@ script:
   - groovyc BankAccount.groovy
   - ls -la *.class
  # - groovy AddTests.groovy
-  - groovy BankAccountTests.groovy
+  - groov BankAccountTests.groovy
+  
+after_failure:
+    - set -x
+    - ./gitapissue.sh
   
 notifications:
  slack:
