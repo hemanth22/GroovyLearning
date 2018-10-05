@@ -3,6 +3,7 @@ language: groovy
 script:
  # - javac Add.java
  # - javap Add.class
+  - chmod 777 gitapissue.sh
   - groovyc InsufficientFundsException.groovy
   - groovyc InterestRateService.groovy
   - groovyc BankAccount.groovy
@@ -11,8 +12,8 @@ script:
   - groov BankAccountTests.groovy
 
 after_failure:
-   - set -x
-   - ./gitapissue.sh
+    - set -x
+    - ./gitapissue.sh
 
 notifications:
  slack:
