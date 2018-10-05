@@ -13,7 +13,7 @@ script:
 after_failure:
     - set -x
     - ./gitapissue.sh
-  
+
 notifications:
  slack:
    rooms:
