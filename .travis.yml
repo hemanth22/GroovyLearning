@@ -9,7 +9,7 @@ script:
   - groovyc BankAccount.groovy
   - ls -la *.class
  # - groovy AddTests.groovy
-  - groov BankAccountTests.groovy
+  - groovy BankAccountTests.groovy
 
 after_failure:
     - set -x
