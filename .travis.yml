@@ -9,10 +9,10 @@ script:
   - ls -la *.class
  # - groovy AddTests.groovy
   - groov BankAccountTests.groovy
-  
+
 after_failure:
-    - set -x
-    - ./gitapissue.sh
+   - set -x
+   - ./gitapissue.sh
 
 notifications:
  slack:
