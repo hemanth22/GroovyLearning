@@ -1,15 +1,15 @@
 language: groovy
 
 script:
- # - javac Add.java
- # - javap Add.class
+  - javac Add.java
+  - javap Add.class
   - chmod 777 gitapissue.sh
-  - groovyc InsufficientFundsException.groovy
-  - groovyc InterestRateService.groovy
-  - groovyc BankAccount.groovy
+  #- groovyc InsufficientFundsException.groovy
+  #- groovyc InterestRateService.groovy
+  #- groovyc BankAccount.groovy
   - ls -la *.class
  # - groovy AddTests.groovy
-  - groovy BankAccountTests.groovy
+ # - groovy BankAccountTests.groovy
 
 after_failure:
     - set -x
