@@ -2,8 +2,12 @@ language: groovy
 
 script:
   - javac Add.java
-  - javap Add.class
-  - chmod 777 gitapissue.sh
+  - javap -p Add.class
+  - javap -l Add.class
+  - javap -c Add.class
+  - javap -s Add.class
+  - javap -public Add.class
+  - javap -sysinfo Add.class
   #- groovyc InsufficientFundsException.groovy
   #- groovyc InterestRateService.groovy
   #- groovyc BankAccount.groovy
