@@ -3,7 +3,7 @@ language: groovy
 script:
   - javac Add.java
   - javap -p Add.class
-  - javap - Add.class
+  - javap -l Add.class
   - javap -c Add.class
   - javap -s Add.class
   - javap -public Add.class
