@@ -3,9 +3,9 @@ sudo: required
 
 script:
   - mvn clean -B
-  - mvn compile
-  - mvn test
-  - mvn testCompile
+  - mvn compile -B
+  - mvn test -B
+  - mvn testCompile -B
   - sudo apt-get install -y tree
   - tree
 
