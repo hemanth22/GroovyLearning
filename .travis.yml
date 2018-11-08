@@ -2,10 +2,8 @@ language: groovy
 sudo: required
 
 script:
-  - mvn clean -B
-  - mvn compile -B
-  - mvn test -B
-  - mvn testCompile -B
+  - mvn clean -DskipTests=false -B
+  - mvn install -DskipTests=false -B
   - sudo apt-get install -y tree
   - tree
 
