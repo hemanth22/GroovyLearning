@@ -5,6 +5,7 @@ script:
   - mvn clean -B
   - mvn compile
   - mvn test
+  - mvn testCompile
   - sudo apt-get install -y tree
   - tree
 

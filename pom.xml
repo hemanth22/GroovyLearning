@@ -58,19 +58,29 @@
                 </dependency>
             </dependencies>
         </plugin>
-        <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-surefire-plugin</artifactId>
-           <version>2.16</version>
-          <configuration>
-          <parallel>methods</parallel>
-          <threadCount>5</threadCount>
-          <includes>
-               <include>**/*Add*.*</include>
-               <include>**/*Spec.*</include>
-          </includes>
-          </configuration>
-       </plugin>
+<plugin>
+  <groupId>org.codehaus.groovy.maven</groupId>
+  <artifactId>gmaven-plugin</artifactId>
+  <version>1.0-rc-3</version>
+  <extensions>true</extensions>
+  <executions>
+    <execution>
+      <goals>
+        <goal>testCompile</goal>
+      </goals>
+      <configuration>
+        <sources>
+          <fileset>
+            <directory>src/test/groovy</directory>
+            <includes>
+              <include>**/*.groovy</include>
+            </includes>
+          </fileset>
+        </sources>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
     </plugins>
   </build>
 </project>
