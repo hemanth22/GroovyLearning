@@ -14,69 +14,39 @@
   <maven.compiler.target>1.8</maven.compiler.target>
 </properties>
 
-<dependencies>
-  <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
-      <version>2.1</version>
-  </dependency>
-    <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
-<dependency>
-    <groupId>org.codehaus.groovy</groupId>
-    <artifactId>groovy-all</artifactId>
-    <version>2.5.4</version>
-    <type>pom</type>
-    <scope>test</scope>
-</dependencies>
-
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.gmavenplus</groupId>
-            <artifactId>gmavenplus-plugin</artifactId>
+ <dependencies>
+        <dependency>
+            <groupId>org.codehaus.groovy.maven.runtime</groupId>
+            <artifactId>gmaven-runtime-1.6</artifactId>
             <version>1.0</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>generateStubs</goal>
-                        <goal>compile</goal>
-                        <goal>testGenerateStubs</goal>
-                        <goal>testCompile</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <dependencies>
-                <dependency>
-                    <groupId>org.codehaus.groovy</groupId>
-                    <artifactId>groovy-all</artifactId>
-                    <version>2.4.4</version>
-                    <scope>runtime</scope>
-                </dependency>
-            </dependencies>
-        </plugin>
-<plugin>
-  <groupId>org.codehaus.groovy.maven</groupId>
-  <artifactId>gmaven-plugin</artifactId>
-  <version>1.0-rc-3</version>
-  <extensions>true</extensions>
-  <executions>
-    <execution>
-      <goals>
-        <goal>testCompile</goal>
-      </goals>
-      <configuration>
-        <sources>
-          <fileset>
-            <directory>src/test/groovy</directory>
-            <includes>
-              <include>**/*.groovy</include>
-            </includes>
-          </fileset>
-        </sources>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
-    </plugins>
-  </build>
+        </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.groovy.maven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generateStubs</goal>
+                            <goal>compile</goal>
+                            <goal>generateTestStubs</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
