@@ -1,6 +1,0 @@
-// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-@Grapes(
-    @Grab(group='mysql', module='mysql-connector-java', version='5.1.13')
-)
-import groovy.sql.Sql
-def sql = Sql.newInstance("jdbc:mysql://localhost:3306/gps","username","password","com.mysql.jdbc.Driver")
