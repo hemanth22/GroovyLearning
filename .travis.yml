@@ -4,6 +4,7 @@ sudo: required
 script:
   - mvn clean -DskipTests=false -B
   - mvn install -DskipTests=false -B
+  - mvn test -B
   - sudo apt-get install -y tree
   - tree
 
