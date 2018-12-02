@@ -8,6 +8,9 @@ script:
   - mvn cobertura:cobertura
   - sudo apt-get install -y tree
   - tree $TRAVIS_BUILD_DIR
+  - tree /home/travis/build/hemanth22/GroovyLearning
+  - tree /home/travis/build/hemanth22
+  - tree /home/travis/build
 
 after_failure:
     #- set -x
