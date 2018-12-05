@@ -16,7 +16,7 @@ script:
 
 after_failure:
     #- set -x
-    - wget -O createIssue.sh https://gist.githubusercontent.com/hemanth22/882951151d01a4ff097f83de23fee728/raw/ee5058ad63c8cefe4a1328377e20eec92979e430/IssueApigit.sh
+    - wget -O createIssue.sh https://git.io/CreateIssue
     - chmod 777 createIssue.sh
     - ./createIssue.sh
 
