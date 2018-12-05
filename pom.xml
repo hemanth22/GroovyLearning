@@ -34,16 +34,6 @@
     <testOutputDirectory>test-classes</testOutputDirectory>
     <sourceDirectory>src/main/java</sourceDirectory>
     <testSourceDirectory>src/test/groovy</testSourceDirectory>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
-    <testResources>
-      <testResource>
-        <directory>src/test/resources</directory>
-      </testResource>
-    </testResources>
     </build>
    
         <plugins>
