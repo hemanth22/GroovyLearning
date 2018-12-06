@@ -3,7 +3,7 @@ sudo: required
 
 script:
   - mvn clean -DskipTests=false -B
-  - mvn clean -Dtest=AddTests
+  - mvn clean -Dtest=AddTests -B
   - mvn install -DskipTests=false -B
   - mvn test -B
   - mvn cobertura:cobertura
