@@ -33,4 +33,4 @@ jobs:
 
       - run:
           name: Maven testing.
-          command: 'mvn clean test'
+          command: 'mvn package'
