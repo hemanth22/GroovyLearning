@@ -32,5 +32,5 @@ jobs:
           command: 'mvn compile'
 
       - run:
-          name: Maven testing.
-          command: 'mvn package'
+          name: Maven Clean.
+          command: 'mvn clean'
