@@ -6,7 +6,7 @@ addons:
   sonarcloud:
     organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
     token:
-      secure: $sonarkey # encrypted value of your token
+      secure: ${sonarkey} # encrypted value of your token
 
 script:
   - mvn clean -DskipTests=false -B
