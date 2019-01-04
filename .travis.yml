@@ -4,7 +4,7 @@ install: true
 
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "sonarcloud" # the key of the org you chose at step #3
     token:
       secure: ${sonarkey} # encrypted value of your token
 
@@ -20,14 +20,13 @@ script:
   - tree /home/travis/build/hemanth22/GroovyLearning
   - tree /home/travis/build/hemanth22
   - tree /home/travis/build
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+  - sonar-scanner
 
 jdk:
   - oraclejdk8
 
 cache:
   directories:
-    - '$HOME/.m2/repository'
     - '$HOME/.sonar/cache'
 
 after_failure:
