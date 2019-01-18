@@ -3,7 +3,9 @@ class Add
 {
 public static void main(String[] arg)
 {
-int a,b,c;
+int a;
+int b;
+int c;
 Scanner sc=new Scanner(System.in);
 System.out.println("Enter first number");
 a=sc.nextInt();
