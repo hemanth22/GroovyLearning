@@ -20,6 +20,11 @@ script:
   - tree /home/travis/build/hemanth22/GroovyLearning
   - tree /home/travis/build/hemanth22
   - tree /home/travis/build
+  - mvn sonar:sonar \
+  -Dsonar.projectKey=hemanth22_GroovyLearning \
+  -Dsonar.organization=hemanth22-github \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=4f74ef7224c17a779077bfeed81cfc006cb4f798
   - sonar-scanner
 
 jdk:
