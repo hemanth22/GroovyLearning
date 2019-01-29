@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.logging.Logger;
 class Add
 {
 public static void main(String[] arg)
@@ -7,9 +8,9 @@ int a;
 int b;
 int c;
 Scanner sc=new Scanner(System.in);
-System.out.println("Enter first number");
+logger.log("Enter first number");
 a=sc.nextInt();
-System.out.println("Enter second number");
+logger.log("Enter second number");
 b=sc.nextInt();
 c=addition(a,b);
 System.out.println(" Addition of two numbers is : "+c);
