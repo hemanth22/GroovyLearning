@@ -17,3 +17,6 @@ jobs:
       - run: 
           name: Maven package.
           command: mvn package
+          
+      - store_artifacts:
+          path: /app/target/JG-1.0-Snapshot.jar
