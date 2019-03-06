@@ -13,7 +13,7 @@ script:
   - mvn install -DskipTests=false -B
   - mvn test -B
   - mvn cobertura:cobertura
-  - mvn clean cobertura:cobertura org.eluder.coveralls:coveralls-maven-plugin:report
+  - mvn coveralls:report
   - sudo apt-get install -y tree
   - tree $TRAVIS_BUILD_DIR
   - tree /home/travis/build/hemanth22/GroovyLearning/jobs
