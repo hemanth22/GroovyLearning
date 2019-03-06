@@ -20,7 +20,7 @@
             <artifactId>gmaven-runtime-1.6</artifactId>
             <version>1.0</version>
         </dependency>
-        
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -59,8 +59,16 @@
                <format>html</format>
                <format>xml</format>
                </formats>
-               <check />
+               <check/>
                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                 <version>4.3.0</version>
+                 <configuration>
+                 <repoToken>3deBayqIBJ6ywWqNrdEFah790GTNAKhbo</repoToken>
+                </configuration>
             </plugin>
         </plugins>
     </build>
