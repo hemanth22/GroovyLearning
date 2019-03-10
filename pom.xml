@@ -27,12 +27,6 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-        
-        <dependency>
-         <groupId>org.eluder.coveralls</groupId>
-         <artifactId>coveralls-maven-plugin</artifactId>
-         <version>4.3.0</version>
-         </dependency>
      </dependencies>
 
     <build>
@@ -67,14 +61,6 @@
                </formats>
                <check/>
                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                 <version>4.3.0</version>
-                 <configuration>
-                 <repoToken>3deBayqIBJ6ywWqNrdEFah790GTNAKhbo</repoToken>
-                </configuration>
             </plugin>
         </plugins>
     </build>
