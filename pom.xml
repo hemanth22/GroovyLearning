@@ -71,7 +71,7 @@
     </build>
     <distributionManagement>
     <snapshotRepository>
-      <id>nexus-snapshots</id>
+      <id>maven-central</id>
       <url>http://192.168.122.1:8081/repository/maven-central/</url>
     </snapshotRepository>
   </distributionManagement>
