@@ -76,8 +76,8 @@
         <url>http://192.168.122.1:8082/artifactory/JavaPrograms</url>
     </repository>
     <snapshotRepository>
-        <id>snapshots</id>
-        <name>29c2ae687850-snapshots</name>
+        <id>JavaPrograms</id>
+        <name>JG-1.0-Snapshot</name>
         <url>http://192.168.122.1:8082/artifactory/JavaPrograms</url>
     </snapshotRepository>
 </distributionManagement>
