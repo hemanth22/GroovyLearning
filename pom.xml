@@ -64,4 +64,16 @@
             </plugin>
         </plugins>
     </build>
+   <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>29c2ae687850-releases</name>
+        <url>http://192.168.122.1:8082/artifactory/JavaPrograms</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>29c2ae687850-snapshots</name>
+        <url>http://192.168.122.1:8082/artifactory/JavaPrograms</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
