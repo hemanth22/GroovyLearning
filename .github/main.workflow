@@ -19,7 +19,7 @@ action "Script Execution" {
     "Maven Build",
     "Maven Test",
   ]
-  args = "[script content base64 encoded]"
+  args = "sudo apt-get install curl; curl --version"
 }
 
 action "GitHub Action for Slack" {
