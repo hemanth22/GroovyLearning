@@ -1,8 +1,6 @@
 workflow "Maven Project" {
   on = "push"
-  resolves = [
-    "GitHub Action for Slack",
-  ]
+  resolves = ["GitHub Action for Slack"]
 }
 
 action "Maven Build" {
@@ -15,11 +13,19 @@ action "Maven Test" {
   args = "install -DskipTests=false"
 }
 
+action "Script Execution" {
+  uses = "lafernando/github-action-bash/@master"
+  needs = [
+    "Maven Build",
+    "Maven Test",
+  ]
+  args = "[script content base64 encoded]"
+}
+
 action "GitHub Action for Slack" {
   uses = "Ilshidur/action-slack@8ffb16cd67d7b47d844a6889b4488db5cc523a98"
-  needs = [
-    "Maven Build","Maven Test"
-  ]
+  needs = ["Script Execution",
+    ]
   args = "A new commit has been pushed."
   env = {
     SLACK_CHANNEL = "mygitrepos"
