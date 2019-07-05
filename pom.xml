@@ -28,7 +28,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>e19cf5c67af2-snapshots</name>
+        <url>http://192.168.122.1:8082/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
     <build>
     <finalName>JG-1.0-Snapshot</finalName>
     <testOutputDirectory>test-classes</testOutputDirectory>
