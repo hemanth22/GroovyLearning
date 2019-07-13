@@ -1,8 +1,8 @@
 workflow "Maven Project" {
   on = "push"
   resolves = [
-    "Maven Deploy",
     "GitHub Action for Slack",
+    "Maven Deployer",
   ]
 }
 
@@ -29,9 +29,9 @@ action "GitHub Action for Slack" {
   secrets = ["SLACK_WEBHOOK"]
 }
 
-action "Maven Deploy" {
+action "Maven Deployer" {
   uses = "LucaFeger/action-maven-cli@765e218a50f02a12a7596dc9e7321fc385888a27"
   needs = ["Maven Test"]
-  secrets = ["JFROG_BINTRAY"]
   runs = "deploy"
+  secrets = ["JFrog_bintray"]
 }
