@@ -32,6 +32,6 @@ action "GitHub Action for Slack" {
 action "Maven Deployer" {
   uses = "LucaFeger/action-maven-cli@765e218a50f02a12a7596dc9e7321fc385888a27"
   needs = ["Maven Test"]
-  runs = "deploy"
+  runs = "install"
   secrets = ["JFrog_bintray"]
 }
