@@ -1,6 +1,7 @@
 workflow "Maven Project" {
   on = "push"
   resolves = [
+    "Maven Deploy",
     "GitHub Action for Slack",
   ]
 }
@@ -18,11 +19,19 @@ action "Maven Test" {
 action "GitHub Action for Slack" {
   uses = "Ilshidur/action-slack@8ffb16cd67d7b47d844a6889b4488db5cc523a98"
   needs = [
-    "Maven Build","Maven Test"
+    "Maven Build",
+    "Maven Test",
   ]
   args = "A new commit has been pushed."
   env = {
     SLACK_CHANNEL = "mygitrepos"
   }
   secrets = ["SLACK_WEBHOOK"]
+}
+
+action "Maven Deploy" {
+  uses = "LucaFeger/action-maven-cli@765e218a50f02a12a7596dc9e7321fc385888a27"
+  needs = ["Maven Test"]
+  secrets = ["JFROG_BINTRAY"]
+  runs = "deploy"
 }
