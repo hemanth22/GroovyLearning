@@ -5,7 +5,7 @@
         <server>
 	<id>bintray-hemanth22-JavaPackage</id>
 	<username>hemanth22</username>
-	<password>JFrog_bintray</password>
+	<password>$JFrog_bintray</password>
         </server>
     </servers>
     <profiles>
