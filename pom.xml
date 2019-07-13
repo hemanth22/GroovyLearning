@@ -67,7 +67,7 @@
 	<repository>
 		<id>bintray-hemanth22-JavaPackage</id>
 		<name>hemanth22-JavaPackage</name>
-		<url>https://api.bintray.com/maven/hemanth22/JavaPackage/[PACKAGE_NAME]/;publish=1</url>
+		<url>https://api.bintray.com/maven/hemanth22/JavaPackage/JG-1.0-Snapshot/;publish=1</url>
 	</repository>
 </distributionManagement>
 </project>
