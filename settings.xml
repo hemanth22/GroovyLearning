@@ -3,9 +3,9 @@
           xmlns='http://maven.apache.org/SETTINGS/1.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
     <servers>
         <server>
-            <id>bintray-repo-maven-example</id>
-            <username>bintray-examples</username>
-            <password>JFrog_bintray</password>
+	<id>bintray-hemanth22-JavaPackage</id>
+	<username>hemanth22</username>
+	<password>JFrog_bintray</password>
         </server>
     </servers>
     <profiles>
